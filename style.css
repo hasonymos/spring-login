@@ -1,0 +1,562 @@
+html, body {
+    padding: 0px;
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    font-family: sans-serif;
+}
+
+#loader  {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#loader .spinner {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 20px solid rgb(255, 255, 255);
+    border-top: 20px solid rgb(1, 103, 255);
+    animation: spin 2s linear infinite;
+    margin-left: 40%;
+    margin-top: 20%;
+}
+
+@keyframes spin {
+    0% {rotate: 0deg;}
+    100% {rotate: 360deg;}
+}
+
+.header {
+    width: 100%;
+    height: 300px;
+    /* background-color: rgb(49, 49, 218); */
+    background-image: url('img/man.jpg');
+    background-size: cover;
+}
+
+.header #topHeader {
+    width: 100%;
+    height: 70px;
+    background-image: linear-gradient(180deg, rgba(0,0,0,0.7), transparent);
+    /* background-color: aliceblue; */
+}
+
+.header #topHeader #headerTitle {
+    width: 30%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    float: left;
+}
+
+.header #topHeader #headerTitle #companyName {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+
+.header #topHeader #headerTitle #companyName h1 {
+    padding: 0px;
+    padding-left: 30px;
+    line-height: 2;
+    margin: 0px;
+    color: white;
+}
+
+.header #topHeader #headerTitle #navButtons {
+    padding: 0px;
+    margin: 0px;
+    display: none;
+}
+
+.header #topHeader #headerNav {
+    width: 70%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    float: right;
+}
+
+.header #topHeader #headerNav .closeBtn {
+    display: none;
+}
+
+.header #topHeader #headerNav #searchDiv {
+    position: relative;
+    width: 40%;
+    height: 100%;
+    float: left;
+}
+
+.header #topHeader #headerNav #searchDiv input {
+    position: absolute;
+    border: none;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 80%;
+    left: 50%;
+    top: 50%;
+    text-transform: capitalize;
+    font-size: 15px;
+    transform: translate(-50%, -50%);
+}
+
+.header #topHeader #headerNav #menu {
+    width: 60%;
+    height: 100%;
+    float: right;
+}
+
+.header #topHeader #headerNav #menu a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    height: 100%;
+    padding: 0px 10px;
+    line-height: 4;
+}
+
+.header #topHeader #headerNav #menu a:hover {
+    background: white;
+    color: black;
+}
+
+.header .intro {
+    position: relative;
+    width: 100%;
+    height: 230px;
+    color: white;
+    padding: 0px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.header .intro p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ad {
+    /* margin-top: 10px; */
+    width: 100%;
+    height: 450px;
+    background-color: orange;
+}
+
+.ad .adSection {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.ad .adSection h1 {
+    font-size: 25px;
+    color: white;
+    padding: 0px;
+    padding-left: 30px;
+    padding-top: 10px;
+    margin: 0px;
+}
+
+.ad .adSection .bizItem {
+    width: 80%;
+    height: 70px;
+    margin-top: 40px;
+    margin-left: 20px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.ad .adSection .bizItem img {
+    float: left;
+    width: 30%;
+    height: 100%;
+}
+
+.ad .adSection .bizItem .desc {
+    float: right;
+    width: 70%;
+    height: 100%;
+    background-color: yellow;
+}
+
+.ad .adSection .bizItem .desc h3 {
+    padding: 0px;
+    margin: 0px;
+    padding-left: 20px;
+    padding-top: 8px;
+
+}
+
+.ad .adSection .bizItem .desc h5 {
+    padding: 0px;
+    margin: 0px;
+    padding-left: 20px;
+    padding-top: 5px;
+    
+}
+
+
+.contactDiv {
+    position: absolute;
+    background: white;
+    padding: 20px;
+    width: 70%;
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+}
+
+.contactDiv label {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.contactDiv input {
+    border: none;
+    background: rgb(211, 208, 208);
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: sans-serif;
+    width: 88%;
+}
+
+.contactDiv #contactBtn {
+    background: red;
+    color: white;
+    padding: 10px 0px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactDiv select {
+    border: none;
+    background: rgb(211, 208, 208);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 15px;
+    width: 100%;
+}
+
+#postsDiv {
+    padding: 20px;
+    background: rgb(155, 25, 25);
+}
+
+#postsDiv .postItem {
+    position: relative;
+    width: 32.2%;
+    overflow: hidden;
+    background-color: white;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+#postsDiv .postItem img {
+    width: 100%;
+    height: 300px;
+}
+
+#postsDiv .postItem #caption {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    max-height: 100px;
+}
+
+#postsDiv .postItem #caption h3 {
+    padding: 10px;
+    margin: 0px;
+    color: white;
+}
+
+
+/***********************Mobile layout*************************/
+@media screen and (max-width: 680px) {
+    .header {
+        width: 100%;
+        height: 300px;
+        background-color: rgb(47, 0, 255);
+    }
+
+    .header #topHeader {
+        width: 100%;
+        height: 70px;
+        /* background-color: aliceblue; */
+    }
+
+    .header #topHeader #headerTitle {
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+        margin: 0px;
+        float: none;
+    }
+
+    .header #topHeader #headerTitle #companyName {
+        padding: 0px;
+        margin: 0px;
+        width: 65%;
+        height: 100%;
+        /* background-color: blue; */
+        float: left;
+    }
+    
+    .header #topHeader #headerTitle #navButtons {
+        display: flex;
+        padding: 0px;
+        margin: 0px;
+        width: 35%;
+        height: 100%;
+        /* background-color: aqua; */
+        float: right;
+        display: block;
+    }
+    
+    .header #topHeader #headerTitle #navButtons .navBtn {
+        height: 100%;
+        width: 30%;
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
+        line-height: 4;
+        cursor: pointer;
+        float: left;
+    }
+    
+    .header #topHeader #headerNav {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 60%;
+        height: 100%;
+        padding: 0px;
+        margin: 0px;
+        float: none;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: none;
+    }
+    
+    .header #topHeader #headerNav .closeBtn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -40px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: red;
+        color: white;
+        cursor: pointer;
+        display: block;
+    }
+    
+    .header #topHeader #headerNav .closeBtn h2 {
+        position: absolute;
+        padding: 0px;
+        margin: 0px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .header #topHeader #headerNav #searchDiv {
+        width: 100%;
+        height: 20%;
+        /* background: red; */
+        border-bottom: 1px solid white;
+        float: none;
+    }
+    
+    .header #topHeader #headerNav #menu {
+        width: 100%;
+        height: 80%;
+        /* background: blueviolet; */
+        float: none;
+    }
+    
+    .header #topHeader #headerNav #menu a {
+        width: 89%;
+        height: 50px;
+        padding-left: 20px;
+        line-height: 3;
+    }
+    
+    .header .intro {
+        position: relative;
+        width: 100%;
+        height: 230px;
+        color: white;
+        padding: 0px;
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    .header .intro p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .ad {
+        /* margin-top: 10px; */
+        width: 100%;
+        height: 450px;
+        background-color: rgb(255, 153, 0);
+    }
+    
+    .ad .adSection {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        float: left;
+        margin-bottom: 20px;
+    }
+    
+    .ad .adSection h1 {
+        font-size: 25px;
+        color: white;
+        padding: 0px;
+        padding-left: 30px;
+        padding-top: 10px;
+        margin: 0px;
+    }
+    
+    .ad .adSection .bizItem {
+        width: 80%;
+        height: 70px;
+        margin-top: 40px;
+        margin-left: 20px;
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    
+    .ad .adSection .bizItem img {
+        float: left;
+        width: 30%;
+        height: 100%;
+    }
+    
+    .ad .adSection .bizItem .desc {
+        float: right;
+        width: 70%;
+        height: 100%;
+        background-color: yellow;
+    }
+    
+    .ad .adSection .bizItem .desc h3 {
+        padding: 0px;
+        margin: 0px;
+        padding-left: 20px;
+        padding-top: 8px;
+    
+    }
+    
+    .ad .adSection .bizItem .desc h5 {
+        padding: 0px;
+        margin: 0px;
+        padding-left: 20px;
+        padding-top: 5px;
+        
+    }
+    
+    
+    .contactDiv {
+        position: absolute;
+        background: white;
+        padding: 20px;
+        width: 70%;
+        top: 50%;
+        left: 50%;
+        border-radius: 10px;
+        transform: translate(-50%, -50%);
+    }
+    
+    .contactDiv label {
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        display: block;
+    }
+    
+    .contactDiv input {
+        border: none;
+        background: rgb(211, 208, 208);
+        padding: 5px 20px;
+        border-radius: 5px;
+        font-size: 18px;
+        font-family: sans-serif;
+        width: 88%;
+    }
+    
+    .contactDiv #contactBtn {
+        background: red;
+        color: white;
+        padding: 10px 0px;
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .contactDiv select {
+        border: none;
+        background: rgb(211, 208, 208);
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 15px;
+        width: 100%;
+    }
+
+    #postsDiv {
+        padding: 20px;
+        background: rgb(155, 25, 25);
+    }
+    
+    #postsDiv .postItem {
+        position: relative;
+        width: 95%;
+        overflow: hidden;
+        background-color: white;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        display: inline-block;
+    }
+    
+    #postsDiv .postItem img {
+        width: 100%;
+        height: 320px;
+    }
+    
+    #postsDiv .postItem #caption {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        bottom: 0px;
+        left: 0px;
+    }
+    
+    #postsDiv .postItem #caption h3 {
+        padding: 10px;
+        margin: 0px;
+        color: white;
+    }
+}
