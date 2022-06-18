@@ -1,6 +1,13 @@
 <?php
 require_once 'sendEmail.php';
 
+
+$conn = new mysqli("localhost", "root", "", "honestat_api");
+if($conn->connect_error) {
+    die("Something went wrong!\n".$conn->connect_error);
+}
+date_default_timezone_set("Africa/Nairobi");
+
 if(isset($_POST['contact'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
@@ -16,11 +23,6 @@ if(isset($_POST['contact'])) {
 }
 
 if(isset($_POST['getPosts'])) {
-    $conn = new mysqli("localhost", "root", "", "honestat_api");
-    if($conn->connect_error) {
-        die("Something went wrong!\n".$conn->connect_error);
-    }
-
     $sql = "SELECT * FROM posts";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
@@ -30,6 +32,29 @@ if(isset($_POST['getPosts'])) {
         echo json_encode($data);
     } else {
         $obj = array("message" => "No records found");
+        echo json_encode($obj);
+    }
+}
+
+if(isset($_POST['post'])) {
+    $sql = "INSERT INTO posts
+    (title, image, body, postTime)
+    VALUES
+    (?,?,?,?)";
+
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("ssss", $theTitle, $theImage, $theBody, $thePostTime);
+    $theTitle = $_POST['title'];
+    $theImage = $_POST['image'];
+    $theBody = $_POST['body'];
+    $thePostTime = date("Y-m-d h:i:s");
+    $stmt->execute();
+    $result = $stmt->insert_id;
+    if($result > 0) {
+        $obj = array("message" => "Post successful");
+        echo json_encode($obj);
+    } else {
+        $obj = array("message" => "Something went wrong!");
         echo json_encode($obj);
     }
 }
