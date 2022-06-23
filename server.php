@@ -4,8 +4,8 @@ require_once 'sendEmail.php';
 
 // $readFile = readfile("serverconfig.json");
 // $serverObj = json_decode($readFile, true);
-$file = fopen("serverConfig.json", "r") or die("unable to open the file");
-$fileContent = fread($file, filesize("serverConfig.json"));
+$file = fopen("server.json", "r") or die("unable to open the file");
+$fileContent = fread($file, filesize("server.json"));
 fclose($file);
 $serverDetails = json_decode($fileContent);
 // var_dump($serverDetails);
