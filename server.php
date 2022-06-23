@@ -4,9 +4,15 @@ require_once 'sendEmail.php';
 
 // $readFile = readfile("serverconfig.json");
 // $serverObj = json_decode($readFile, true);
-var_dump(json_decode(readfile("serverconfig.json")));
+$file = fopen("serverConfig.json", "r") or die("unable to open the file");
+$fileContent = fread($file, filesize("serverConfig.json"));
+fclose($file);
+$serverDetails = json_decode($fileContent);
+// var_dump($serverDetails);
 
-$conn = new mysqli("localhost", "root", "", "honestat_api");
+$conn = new mysqli($serverDetails->server, $serverDetails->user, 
+    $serverDetails->password, $serverDetails->database);
+
 if($conn->connect_error) {
     die("Something went wrong!\n".$conn->connect_error);
 }
